@@ -10,6 +10,15 @@
 
 
 from pyrogram import Client, filters
+import logging
+
+
+logging.basicConfig(
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    level=logging.INFO
+)
+
+logger = logging.getLogger(__name__)
 
 api_id = 14681826
 api_hash = "add59ab14dbbccf3c92c65ca4477f2fa"
@@ -19,6 +28,8 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 @app.on_message(filters.command("start"))
 async def start_handler(client, message):
+    logger.info(f"Received /start from {message.from_user.id}")
     await message.reply("Hello!")
 
+logger.info("Starting bot...")
 app.run()
