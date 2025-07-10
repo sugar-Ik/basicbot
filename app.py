@@ -14,7 +14,7 @@ import logging
 
 
 logging.basicConfig(
-    stream=sys.stdout
+    stream=sys.stdout,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
