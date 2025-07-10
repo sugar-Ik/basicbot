@@ -30,6 +30,7 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
 @app.on_message(filters.command("start"))
 async def start_handler(client, message):
+    print("heheehe")
     logger.info(f"Received /start from {message.from_user.id}")
     await message.reply("Hello!")
 
