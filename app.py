@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 api_id = 14681826
 api_hash = "add59ab14dbbccf3c92c65ca4477f2fa"
-bot_token = "5977798236:AAF_unH81iJf7S95SdgW9YOcoii8aX-CBwU"
+bot_token = "5302296045:AAHC5ebjWRnZXvgV1uuWT3Ap7nUZE97rXSQ" # @newsxdbot
 
 app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 
