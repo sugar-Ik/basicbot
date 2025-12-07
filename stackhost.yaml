@@ -1,0 +1,16 @@
+user:
+  name: "Bob"
+  github: "bobdev"
+
+runtime:
+  image: "python:3.11-slim"
+
+commands:
+  package: "inxi"
+  build:
+    - "pip install -r requirements.txt"
+  start: "python app.py"
+
+repository:
+  branch: "main"
+  auto_deploy: true
