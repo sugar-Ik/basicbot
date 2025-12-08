@@ -22,7 +22,7 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 async def start_handler(client, message):
     print("heheehe")
     logger.info(f"Received /start from {message.from_user.id}")
-    await message.reply("Hello!")
+    await message.reply(f"Hello {message.from_user.first_name}!")
 
 logger.info("Starting bot...")
 app.run()
