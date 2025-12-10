@@ -5,7 +5,11 @@ user:
 runtime:
   image: "python:3.11-slim"
 
-
+commands:
+  package: "inxi"
+  build:
+    - "pip install -r requirements.txt"
+  start: "python api.py"
 
 repository:
   branch: "main"
